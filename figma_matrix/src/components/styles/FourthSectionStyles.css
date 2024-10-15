@@ -1,14 +1,62 @@
+/* Default styles (for large screens above 1024px) */
+.tokenomicsData {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.blockchain {
+  width: 70%; 
+}
+
+/* For large devices (desktops, max-width: 1024px) */
+@media (max-width: 1024px) {
+  .tokenomicsData {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .blockchain {
+    width: 90%; 
+  }
+}
+
+/* For medium devices (tablets, max-width: 768px) */
 @media (max-width: 768px) {
-    .tokenomicsData{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-      }
-      .blockchain{
-        width: full
-        
-        
-      }
+  .tokenomicsData {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .blockchain {
+    width: 100%; 
+  }
+}
+
+/* For small devices (phones, max-width: 576px) */
+@media (max-width: 576px) {
+  .tokenomicsData {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+  }
+  .blockchain {
+    width: 100%; 
+  }
+}
+
+/* For extra small devices (phones, max-width: 425px) */
+@media (max-width: 425px) {
+  .tokenomicsData {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+  }
+  .blockchain {
+    width: 100%; /* Full width */
+  }
 }

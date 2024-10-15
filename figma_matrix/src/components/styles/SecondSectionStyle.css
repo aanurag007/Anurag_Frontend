@@ -1,172 +1,101 @@
+/* Main grid layout for large screens */
 .container {
-    display: grid;
-    grid-template-columns: repeat(4, 260px);
-    grid-template-rows: repeat(3, 120px);
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
-  }
-  
-  .box {
-    padding: 12px;
-    max-width: 400px;
-  }
-  
-  /* Existing boxes styling */
-  
-  /* Box 1 */
-  #box1 {
-    grid-column: 1;
-    grid-row: 1 / 4;
-  }
-  
-  /* Box 2 */
-  #box2 {
-    grid-column: 2 / 4;
-    grid-row: 1;
-  }
-  
-  /* Box 4 */
-  #box4 {
-    grid-column: 4;
-    grid-row: 1 / 4;
-  }
-  
-  /* Box 6 */
-  #box6 {
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
-  }
-  
-  /* New 40:60 ratio boxes */
-  
-  /* Box 7 (40%) */
-  #box7 {
-    grid-column: 1;
-    grid-row: 4;
-  }
-  
-  /* Box 8 (60%) */
-  #box8 {
-    grid-column: 2 / 5;
-    grid-row: 4;
-  }
-  
-  /* MEDIA QUERIES */
-  
-  
-  @media (max-width: 1024px) {
-    .container {
-      grid-template-columns: repeat(4, 200px);
-      grid-template-rows: repeat(3, 120px);
-    }
-  }
-  
-  
-  @media (max-width: 768px) {
-    .container {
-      grid-template-columns: repeat(4, 150px);
-      grid-template-rows: repeat(3, 120px);
-    }
-  }
-  
-  
-  @media (max-width: 424px) {
-      .container {
-          display: flex; /* Use flex layout for mobile */
-          flex-wrap: wrap; /* Allow wrapping of items */
-          justify-content: space-between; /* Distribute space between items */
-          gap: 10px; /* Space between boxes */
-          height: auto;
-        }
-      
-        .box {
-          flex: 1 1 calc(50% - 10px); /* Make boxes responsive, taking up to half of the width with spacing */
-          max-width: calc(50% - 10px); /* Limit max-width for spacing */
-          margin-bottom: 10px; /* Add bottom margin for spacing */
-        }
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  grid-template-rows: repeat(3, 120px);
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.box {
+  padding: 12px;
+  max-width: 400px;
+}
+
+/* Box positioning for large screens */
+#box1 {
+  grid-column: 1;
+  grid-row: 1 / 4;
+}
+
+#box2 {
+  grid-column: 2 / 4;
+  grid-row: 1;
+}
+
+#box4 {
+  grid-column: 4;
+  grid-row: 1 / 4;
+}
+
+#box6 {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+}
+
+#box7 {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#box8 {
+  grid-column: 2 / 5;
+  grid-row: 4;
+}
+
+/* Media queries */
+
+/* For large devices (max-width: 1024px) */
+@media (max-width: 1024px) {
   .container {
-    display: grid;
-    grid-template-columns: repeat(4, 260px);
+    grid-template-columns: repeat(4, 200px);
     grid-template-rows: repeat(3, 120px);
-    justify-content: center;
-    align-content: center;
-    gap: 10px;
   }
-  
+}
+
+/* For tablets and medium devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* Flexbox layout for smaller screens */
+    gap: 20px;
+    align-items: center;
+  }
+
   .box {
-    padding: 12px;
-    max-width: 400px;
+    width: 100%; /* Ensure full width */
+    max-width: 100%;
   }
-  
-  #box1 {
-    grid-column: 1;
-    grid-row: 1 / 4;
-  }
-  
-  #box2 {
-    grid-column: 2 / 4;
-    grid-row: 1;
-  }
-  
-  #box4 {
-    grid-column: 4;
-    grid-row: 1 / 4;
-  }
-  
+
+  /* Hide Box 6 */
   #box6 {
-    grid-column: 2 / 4;
-    grid-row: 2 / 4;
+    display: none;
   }
-  
-  #box7 {
-    grid-column: 1;
-    grid-row: 4;
+}
+
+/* For mobile devices (max-width: 425px) */
+@media (min-width: 425px) {
+  .container {
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Maintain gap between boxes */
+    align-items: center;
+    width: 100%; /* Ensure container takes full screen width */
   }
-  
-  #box8 {
-    grid-column: 2 / 5;
-    grid-row: 4;
+
+  .box {
+    width: 100%; /* Make boxes responsive */
+    max-width: 100%; /* Ensure no extra width is set */
   }
-  
-  @media (max-width: 1024px) {
-    .container {
-      grid-template-columns: repeat(4, 200px);
-      grid-template-rows: repeat(3, 120px);
-    }
+
+  /* Hide Box 6 for mobile screens */
+  #box6 {
+    display: none;
   }
-  
-  @media (max-width: 424px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      align-items: center;
-    }
-    .box6{
-      display: none;
-    }
-    .box {
-     width: 100%;
-     max-width: 100%;
-    }
+
+  /* Ensure all boxes fit the screen width */
+  #box1, #box2, #box4, #box7, #box8 {
+    width: 100%; /* Full width for all boxes */
   }
-  
-  @media (max-width: 768px) {
-    .container {
-      display: flex;
-      flex-direction: column; /* Flexbox layout for tablet */
-      gap: 20px;
-      align-items: center;
-    }
-    .box{
-     width: 100%;
-    }
-    .box6{
-      display: none;
-    }
-  
-   
-    
-  }
+}

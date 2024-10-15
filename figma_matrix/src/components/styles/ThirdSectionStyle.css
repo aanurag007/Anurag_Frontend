@@ -1,17 +1,60 @@
-
-
+/* For tablets and medium devices (max-width: 768px) */
 @media (max-width: 768px) {
-    .about {
-      display:flex;
-      flex-direction: column;
-    }
-    .main{
-      width:90%;
-     
-    }
-    .smallBox{
-      box-sizing: border-box;
-      width: full;
-      
-    }
+  .about {
+    display: flex;
+    flex-direction: column;
   }
+  .main {
+    width: 90%; 
+    margin: 0 auto; 
+  }
+  .smallBox {
+    box-sizing: border-box;
+    width: 100%; 
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+  }
+  .main {
+    width: 95%; 
+    margin: 0 auto;
+  }
+  .smallBox {
+    width: 100%; 
+  }
+}
+
+/* For extra small devices (max-width: 425px) */
+@media (max-width: 425px) {
+  .about {
+    flex-direction: column;
+    gap: 15px; 
+  }
+  .main {
+    width: 100%; /* Take full screen width */
+    margin: 0 auto;
+  }
+  .smallBox {
+    width: 100%; /* Ensure smallBox takes full width */
+  }
+}
+
+/* For larger screens (above 768px) */
+@media (min-width: 769px) {
+  .about {
+    display: flex;
+    flex-direction: row; /* Use row layout on larger screens */
+    justify-content: space-between;
+  }
+  .main {
+    width: 100%; /* Full width on larger screens */
+  }
+  .smallBox {
+    width: auto; /* Allow smallBox to size according to content */
+  }
+}
