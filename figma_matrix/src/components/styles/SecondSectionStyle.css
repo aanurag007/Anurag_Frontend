@@ -75,7 +75,7 @@
 }
 
 /* For mobile devices (max-width: 425px) */
-@media (min-width: 425px) {
+@media (m-width: 425px) {
   .container {
     display: flex; /* Flex layout */
     flex-direction: column; /* Stack items vertically */

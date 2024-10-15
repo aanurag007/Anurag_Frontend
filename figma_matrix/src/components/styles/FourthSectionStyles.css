@@ -54,7 +54,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px; 
+    gap: 10px; /* Tighter gap for very small screens */
   }
   .blockchain {
     width: 100%; /* Full width */

@@ -38,7 +38,7 @@ const SixthSection: React.FC = () => {
   ];
 
   return (
-    <Box color={"white"} h={"600px"}>
+    <Box color={"white"} h={"500px"}>
       <Flex
         justify="center"
         align={{ base: "center", md: "center" }}
@@ -54,7 +54,7 @@ const SixthSection: React.FC = () => {
         >
           <Text
             className="font-space font-normal"
-            fontSize="36px"
+            fontSize="30px"
             ml={[16, 0, 20, 12]}
           >
             Frequently Asked Questions
@@ -66,7 +66,7 @@ const SixthSection: React.FC = () => {
           display="flex"
           justifyContent="center"
           alignItems="center"
-          height="20%"
+          height="70%"
         >
           <Accordion allowMultiple width="80%" border="none">
             {faqs.map((faq, index) => (
