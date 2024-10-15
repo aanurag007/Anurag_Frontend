@@ -1,0 +1,17 @@
+
+
+@media (max-width: 768px) {
+    .about {
+      display:flex;
+      flex-direction: column;
+    }
+    .main{
+      width:90%;
+     
+    }
+    .smallBox{
+      box-sizing: border-box;
+      width: full;
+      
+    }
+  }

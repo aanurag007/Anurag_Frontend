@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .tokenomicsData{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .blockchain{
+        width: full
+        
+        
+      }
+}
