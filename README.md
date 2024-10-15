@@ -36,8 +36,10 @@ This project is built using **React** and optional **TypeScript**. The primary g
 
 Include some screenshots of your project to showcase the UI:
 
-![Screenshot 1](https://github.com/user-attachments/assets/42b685c7-3b57-45a5-bd54-f59ed577337e)
-![Screenshot 2](https://github.com/user-attachments/assets/86ba0152-a8a4-4b65-b51f-da292cd56245)
+![Screenshot 1](https://github.com/user-attachments/assets/44ad954f-89f7-4717-97cb-b277384647ca)
+
+![Screenshot 2](https://github.com/user-attachments/assets/488a9126-b43c-4304-9b83-60ced539731d)
+
 
 ## Installation
 
